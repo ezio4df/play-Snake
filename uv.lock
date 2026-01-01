@@ -458,6 +458,12 @@ wheels = [
 ]
 
 [[package]]
+name = "gputil"
+version = "1.4.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ed/0e/5c61eedde9f6c87713e89d794f01e378cfd9565847d4576fa627d758c554/GPUtil-1.4.0.tar.gz", hash = "sha256:099e52c65e512cdfa8c8763fca67f5a5c2afb63469602d5dcb4d296b3661efb9", size = 5545, upload-time = "2018-12-18T09:12:13.63Z" }
+
+[[package]]
 name = "gym-snakegame"
 version = "0.0.1"
 source = { git = "https://github.com/helpingstar/gym-snakegame.git#a809354855d274cf63c92b6be1d9aa8d050f1636" }
@@ -1627,6 +1633,7 @@ dependencies = [
     { name = "numpy" },
     { name = "pandas" },
     { name = "pygame" },
+    { name = "pytorch-benchmark" },
     { name = "scikit-learn" },
     { name = "scipy-stubs" },
     { name = "seaborn" },
@@ -1645,6 +1652,7 @@ requires-dist = [
     { name = "numpy", specifier = ">=2.4.0" },
     { name = "pandas", specifier = ">=2.3.3" },
     { name = "pygame", specifier = ">=2.6.1" },
+    { name = "pytorch-benchmark", specifier = ">=0.3.6" },
     { name = "scikit-learn", specifier = ">=1.8.0" },
     { name = "scipy-stubs", specifier = "~=1.16.3" },
     { name = "seaborn", specifier = ">=0.13.2" },
@@ -1715,6 +1723,15 @@ wheels = [
 ]
 
 [[package]]
+name = "ptflops"
+version = "0.6.9"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "torch" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/d5/16/b6992b799d14bdc7a78fbfff8825777dd92728ed761090852c43f4792ce1/ptflops-0.6.9.tar.gz", hash = "sha256:95423006d7520eff5cc2fcbbd149329d39d81c9bff361c9b3b13bfbd5d1efe75", size = 12988, upload-time = "2022-05-06T19:45:34.982Z" }
+
+[[package]]
 name = "ptyprocess"
 version = "0.7.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1730,6 +1747,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/cd/05/0a34433a064256a578f1783a10da6df098ceaa4a57bbeaa96a6c0352786b/pure_eval-0.2.3.tar.gz", hash = "sha256:5f4e983f40564c576c7c8635ae88db5956bb2229d7e9237d03b3c0b0190eaf42", size = 19752, upload-time = "2024-07-21T12:58:21.801Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8e/37/efad0257dc6e593a18957422533ff0f87ede7c9c6ea010a2177d738fb82f/pure_eval-0.2.3-py3-none-any.whl", hash = "sha256:1db8e35b67b3d218d818ae653e27f06c3aa420901fa7b081ca98cbedc874e0d0", size = 11842, upload-time = "2024-07-21T12:58:20.04Z" },
+]
+
+[[package]]
+name = "py-cpuinfo"
+version = "9.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/37/a8/d832f7293ebb21690860d2e01d8115e5ff6f2ae8bbdc953f0eb0fa4bd2c7/py-cpuinfo-9.0.0.tar.gz", hash = "sha256:3cdbbf3fac90dc6f118bfd64384f309edeadd902d7c8fb17f02ffa1fc3f49690", size = 104716, upload-time = "2022-10-25T20:38:06.303Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e0/a9/023730ba63db1e494a271cb018dcd361bd2c917ba7004c3e49d5daf795a2/py_cpuinfo-9.0.0-py3-none-any.whl", hash = "sha256:859625bc251f64e21f077d099d4162689c762b5d6a4c3c97553d56241c9674d5", size = 22335, upload-time = "2022-10-25T20:38:27.636Z" },
 ]
 
 [[package]]
@@ -1802,6 +1828,25 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/29/bf/eca6a3d43db1dae7070f70e160ab20b807627ba953663ba07928cdd3dc58/python_json_logger-4.0.0.tar.gz", hash = "sha256:f58e68eb46e1faed27e0f574a55a0455eecd7b8a5b88b85a784519ba3cff047f", size = 17683, upload-time = "2025-10-06T04:15:18.984Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/51/e5/fecf13f06e5e5f67e8837d777d1bc43fac0ed2b77a676804df5c34744727/python_json_logger-4.0.0-py3-none-any.whl", hash = "sha256:af09c9daf6a813aa4cc7180395f50f2a9e5fa056034c9953aec92e381c5ba1e2", size = 15548, upload-time = "2025-10-06T04:15:17.553Z" },
+]
+
+[[package]]
+name = "pytorch-benchmark"
+version = "0.3.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "gputil" },
+    { name = "numpy" },
+    { name = "psutil" },
+    { name = "ptflops" },
+    { name = "py-cpuinfo" },
+    { name = "pyyaml" },
+    { name = "torch" },
+    { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/91/9e/597879f4df381ae4e8cc2bb02c7ec6e0dc4a3f226fd967e07a6a4e29c667/pytorch-benchmark-0.3.6.tar.gz", hash = "sha256:1f36c179096cc1b5d4f9c7e176578f64582b7bfe248e84b031c6e955b80a0e12", size = 20310, upload-time = "2023-08-10T07:04:47.895Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e9/77/39d9fd682f57f2be5224139d4268a1c42ced1670ae469206caa0ce3de5bf/pytorch_benchmark-0.3.6-py3-none-any.whl", hash = "sha256:2b9534c1cd2bc583a03df1c70051375310d714165c189507e297f05362ae4ea7", size = 16703, upload-time = "2023-08-10T07:04:45.932Z" },
 ]
 
 [[package]]

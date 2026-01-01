@@ -12,6 +12,7 @@ dependencies = [
     "numpy>=2.4.0",
     "pandas>=2.3.3",
     "pygame>=2.6.1",
+    "pytorch-benchmark>=0.3.6",
     "scikit-learn>=1.8.0",
     "scipy-stubs~=1.16.3",
     "seaborn>=0.13.2",
